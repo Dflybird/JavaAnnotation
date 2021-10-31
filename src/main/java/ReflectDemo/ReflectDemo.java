@@ -23,12 +23,12 @@ public class ReflectDemo {
         System.out.println("======================");
 
         //第二种实例化方式
-        Constructor constructor1 = clazz.getConstructor(int.class, String.class);
+        Constructor<?> constructor1 = clazz.getConstructor(int.class, String.class);
         User user2 = (User) constructor1.newInstance(12, "user2");
         System.out.println("user2: "+user2);
         System.out.println("======================");
 
-        Constructor constructor2 = clazz.getDeclaredConstructor(String.class);
+        Constructor<?> constructor2 = clazz.getDeclaredConstructor(String.class);
         //将private的构造函数设为可访问
         constructor2.setAccessible(true);
         User user3 = (User) constructor2.newInstance("user3");
@@ -47,6 +47,10 @@ public class ReflectDemo {
             }
             System.out.println(")");
         }
+
+        Class<?> IntegerClass = Integer.class;
+        Class<?> intClass = int.class;
+        System.out.println("Integer: " + IntegerClass + " | int: " + intClass);
     }
 
 }

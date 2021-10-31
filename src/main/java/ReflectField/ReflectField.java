@@ -25,6 +25,7 @@ public class ReflectField {
             System.out.println(f+" == from class:"+ f.getDeclaringClass());
         }
 
+        System.out.println("=====setFields======");
         Object student = clazz.newInstance();
         Field name = clazz.getField("name");
         name.set(student, "student");
