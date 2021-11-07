@@ -1,4 +1,4 @@
-package ReflectDemo;
+package ReflectClass;
 
 public class User {
     private int age;

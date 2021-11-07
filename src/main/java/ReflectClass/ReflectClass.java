@@ -1,4 +1,4 @@
-package ReflectDemo;
+package ReflectClass;
 
 import java.lang.reflect.Constructor;
 
@@ -7,13 +7,13 @@ import java.lang.reflect.Constructor;
  * @Date 2020/9/11 15:50
  * @Version 1.0
  **/
-public class ReflectDemo {
+public class ReflectClass {
     public static void main(String[] args) throws Exception {
 
         Class<?> clazz = null;
 
         //获取class对象的引用
-        clazz = Class.forName("ReflectDemo.User");
+        clazz = Class.forName("ReflectClass.User");
 
         //第一种实例化方式
         User user1 = (User) clazz.newInstance();
